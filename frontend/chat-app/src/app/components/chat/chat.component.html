@@ -1,0 +1,30 @@
+<div class="chat-container">
+  @if (!isConnected) {
+    <div class="login-container">
+      <input 
+        type="text" 
+        [(ngModel)]="username" 
+        placeholder="Enter your username"
+        (keyup.enter)="connect()"
+      >
+      <button (click)="connect()">Join Chat</button>
+    </div>
+  } @else {
+    <div class="messages-container">
+      @for (msg of messages; track msg) {
+        <div class="message" [class.system]="msg.type !== 'message'">
+          <strong>{{ msg.username }}:</strong> {{ msg.content }}
+        </div>
+      }
+    </div>
+    <div class="input-container">
+      <input 
+        type="text" 
+        [(ngModel)]="message" 
+        placeholder="Type a message..."
+        (keyup.enter)="sendMessage()"
+      >
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  }
+</div>

@@ -1,0 +1,28 @@
+# Backend
+backend/tmp/
+backend/*.exe
+backend/*.exe~
+backend/*.dll
+backend/*.so
+backend/*.dylib
+backend/*.test
+backend/*.out
+
+# Frontend
+frontend/chat-app/dist
+frontend/chat-app/node_modules
+frontend/chat-app/.angular/cache
+frontend/chat-app/npm-debug.log
+frontend/chat-app/yarn-error.log
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# System Files
+.DS_Store
+Thumbs.db 
